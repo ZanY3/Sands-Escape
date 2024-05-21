@@ -44,12 +44,12 @@ public class RoomSpawner : MonoBehaviour
                     Instantiate(variants.rightRooms[rand], transform.position, Quaternion.identity);
                     break;
             }
+            spawned = true;
         }
-        spawned = true;
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("RoomPoint") && collision.GetComponent<RoomSpawner>().spawned) //что бы предатвратить спавн комнаты на комнате
+        if(collision.CompareTag("RoomPoint") && collision.GetComponent<RoomSpawner>().spawned) //что бы предатвратить спавн комнаты на комнате
         {
             Destroy(gameObject);
         }
