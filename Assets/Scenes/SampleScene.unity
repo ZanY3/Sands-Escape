@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 604039368}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -898,7 +898,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &5094899778993837251
+--- !u!1001 &1999896308
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -960,6 +960,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 5094899778993837251}
   - {fileID: 604039365}
   - {fileID: 87922612}
+  - {fileID: 1999896308}

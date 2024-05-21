@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7755826051072657854}
   - component: {fileID: 987047904852895535}
+  - component: {fileID: -987692486906648036}
   m_Layer: 0
   m_Name: RoomMover
   m_TagString: RoomMover
@@ -77,3 +78,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2, y: 0.25}
   m_EdgeRadius: 0
+--- !u!114 &-987692486906648036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8755748531873361972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83806e3fede3c2d4c900a5ef9037b279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraChangePos: {x: 0, y: 8, z: 0}
+  playerChangePos: {x: 0, y: 2, z: 0}
