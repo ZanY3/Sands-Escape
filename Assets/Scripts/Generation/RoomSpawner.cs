@@ -11,9 +11,9 @@ public class RoomSpawner : MonoBehaviour
         Right,
         None
     } //вариации нарпавлений комнат
+    public bool spawned = false;
     private RoomVariants variants;
     private int rand;
-    private bool spawned = false;
     private float waitTime = 3f;
     private void Start()
     {
