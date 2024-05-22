@@ -15,7 +15,7 @@ public class RoomMover : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             collision.transform.position += playerChangePos;
-            cam.transform.position = cameraChangePos;
+            cam.transform.position += cameraChangePos;
         }
     }
 }
