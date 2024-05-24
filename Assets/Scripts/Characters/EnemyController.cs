@@ -15,13 +15,17 @@ public class EnemyController : MonoBehaviour
     public float minYRandomPoint;
     public float maxXRandomPoint;
     public float maxYRandomPoint;
+    [Space]
+    public WallController room;
 
     private Transform target;
     private Vector2 randomTargetPoint;
     private float startAttackCD;
+    private Health health;
 
     private void Start()
     {
+        health = GetComponent<Health>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         startAttackCD = attackCD;
         SetNewRandomTargetPoint();
@@ -29,6 +33,11 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
+        if(gameObject.GetComponent<Health>().health <= 0)
+        {
+            room.enemiesLeft--;
+            Destroy(gameObject);
+        }
         attackCD -= Time.deltaTime;
         float distanceToPlayer = Vector2.Distance(transform.position, target.position);
 
@@ -58,7 +67,6 @@ public class EnemyController : MonoBehaviour
             SetNewRandomTargetPoint();
         }
     }
-
     private void SetNewRandomTargetPoint()
     {
         randomTargetPoint = GetRandomPoint();

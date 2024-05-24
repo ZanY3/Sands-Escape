@@ -208,3 +208,4 @@ MonoBehaviour:
   minYRandomPoint: -2.7
   maxXRandomPoint: 5
   maxYRandomPoint: 1.7
+  room: {fileID: 0}

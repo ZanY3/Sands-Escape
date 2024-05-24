@@ -34,6 +34,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        healthBar.sizeDelta = new Vector2(startBarSize * health / maxHealth, healthBar.sizeDelta.y);
+        if(isPlayer)
+            healthBar.sizeDelta = new Vector2(startBarSize * health / maxHealth, healthBar.sizeDelta.y);
     }
 }
