@@ -6,6 +6,8 @@ using UnityEngine;
 public class WallController : MonoBehaviour
 {
     public GameObject[] walls;
+    public GameObject enemies;
+    public int enemiesLeft;
     public bool isOpened = true;
     public bool closeRoom = true;
     private void Start()
@@ -24,12 +26,19 @@ public class WallController : MonoBehaviour
                 wall.SetActive(!isOpened);
             }
         }
+        if(enemiesLeft <= 0)
+        {
+            isOpened = true;
+        }
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            print("colided");
+            print("level started");
+            if(closeRoom)
+                enemies.SetActive(true);
             isOpened = false;
 
         }

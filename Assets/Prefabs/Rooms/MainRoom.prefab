@@ -170,8 +170,10 @@ MonoBehaviour:
   - {fileID: 1921608495016620353}
   - {fileID: 6893957686856486801}
   - {fileID: 6940274907017228833}
+  enemies: {fileID: 0}
+  enemiesLeft: 0
   isOpened: 1
-  closeRoom: 1
+  closeRoom: 0
 --- !u!1 &8217193068813905698
 GameObject:
   m_ObjectHideFlags: 0

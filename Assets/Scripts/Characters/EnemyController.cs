@@ -7,11 +7,14 @@ public class EnemyController : MonoBehaviour
 {
     public float speed;
     public float maxRangeToFollow;
-    public float attackCD;
     [Space]
+    public float attackCD;
+    public int damage;
+    [Space]
+    public float minXRandomPoint;
+    public float minYRandomPoint;
     public float maxXRandomPoint;
     public float maxYRandomPoint;
-    public Transform randomPointCenter;
 
     private Transform target;
     private Vector2 randomTargetPoint;
@@ -26,6 +29,7 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
+        attackCD -= Time.deltaTime;
         float distanceToPlayer = Vector2.Distance(transform.position, target.position);
 
         if (target != null && distanceToPlayer < maxRangeToFollow)
@@ -40,7 +44,16 @@ public class EnemyController : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Block"))
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            if(attackCD <= 0)
+            {
+                collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+                attackCD = startAttackCD;
+            }
+        }
+
+        if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Enemy"))
         {
             SetNewRandomTargetPoint();
         }
@@ -66,8 +79,8 @@ public class EnemyController : MonoBehaviour
 
     private Vector2 GetRandomPoint()
     {
-        float randX = Random.Range(randomPointCenter.position.x, maxXRandomPoint);
-        float randY = Random.Range(randomPointCenter.position.y, maxYRandomPoint);
+        float randX = Random.Range(minXRandomPoint, maxXRandomPoint);
+        float randY = Random.Range(minYRandomPoint, maxYRandomPoint);
         return new Vector2(randX, randY);
     }
 }
