@@ -15,7 +15,7 @@ public class Health : MonoBehaviour
     private float startBarSize;
     private void Start()
     {
-        if(isPlayer)
+        if (isPlayer)
         {
             startBarSize = healthBar.sizeDelta.x;
             healthBar.sizeDelta = new Vector2(startBarSize * health / maxHealth, healthBar.sizeDelta.y);
@@ -23,9 +23,9 @@ public class Health : MonoBehaviour
     }
     private void Update()
     {
-        if(isPlayer)
+        if (isPlayer)
         {
-            if(health <= 0)
+            if (health <= 0)
             {
                 SceneManager.LoadScene("Game");
             }
@@ -34,7 +34,12 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        if(isPlayer)
+        if (isPlayer)
             healthBar.sizeDelta = new Vector2(startBarSize * health / maxHealth, healthBar.sizeDelta.y);
+    }
+    public void TakeBonus(int count)
+    {
+        health += count;
+        healthBar.sizeDelta = new Vector2(startBarSize * health / maxHealth, healthBar.sizeDelta.y);
     }
 }

@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  maxRangeToFollow: 4
+  maxRangeToFollow: 8
   attackCD: 1.5
   damage: 20
   minXRandomPoint: -5
