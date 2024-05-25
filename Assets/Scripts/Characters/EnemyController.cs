@@ -17,11 +17,11 @@ public class EnemyController : MonoBehaviour
     public float maxYRandomPoint;
     [Space]
     public WallController room;
-
     private Transform target;
     private Vector2 randomTargetPoint;
     private float startAttackCD;
     private Health health;
+    
 
     private void Start()
     {
@@ -70,7 +70,6 @@ public class EnemyController : MonoBehaviour
     private void SetNewRandomTargetPoint()
     {
         randomTargetPoint = GetRandomPoint();
-        Debug.Log("New Random Target Point: " + randomTargetPoint);
     }
 
     private void MoveToRandomPoint()
@@ -87,8 +86,17 @@ public class EnemyController : MonoBehaviour
 
     private Vector2 GetRandomPoint()
     {
-        float randX = Random.Range(minXRandomPoint, maxXRandomPoint);
-        float randY = Random.Range(minYRandomPoint, maxYRandomPoint);
-        return new Vector2(randX, randY);
+        if (room != null)
+        {
+            var roomTransform = room.GetComponent<Transform>();
+            float randX = Random.Range(-roomTransform.position.x - 10, roomTransform.position.x + 10);
+            float randY = Random.Range(-roomTransform.position.y - 5, roomTransform.position.y + 5);
+            return new Vector2(randX, randY);
+        }
+        else
+        {
+            Debug.LogError("Current room not found!");
+            return transform.position;
+        }
     }
 }

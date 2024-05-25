@@ -10,6 +10,7 @@ public class WallController : MonoBehaviour
     public int enemiesLeft;
     public bool isOpened = true;
     public bool closeRoom = true;
+
     private void Start()
     {
         foreach (GameObject wall in walls)
