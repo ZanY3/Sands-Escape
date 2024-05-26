@@ -9,10 +9,19 @@ public class Wearpon : MonoBehaviour
     public float shootCD;
     public float offset;
     public bool usable = true;
+    [Space]
+    public bool isUseMana = false;
+    public float manaForOneShot;
+    [Space]
+    public AudioClip shootSound;
 
+    private Mana mana;
     private float startShootCD;
+    private AudioSource source;
+
     private void Start()
     {
+        mana = GameObject.FindGameObjectWithTag("Player").GetComponent<Mana>();
         startShootCD = shootCD;
     }
     private void Update()
@@ -24,8 +33,17 @@ public class Wearpon : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            if(usable == true && shootCD <= 0)
+            if(usable == true && shootCD <= 0 && mana.mana >= manaForOneShot)
             {
+                if(isUseMana)
+                {
+                    source.PlayOneShot(shootSound);
+                    mana.mana -= manaForOneShot;
+                }
+                else
+                {
+                    source.PlayOneShot(shootSound);
+                }
                 Instantiate(bullet, shootPoint.position, Quaternion.identity);
                 shootCD = startShootCD;
             }

@@ -17,8 +17,8 @@ public class Health : MonoBehaviour
     {
         if (isPlayer)
         {
-            startBarSize = healthBar.sizeDelta.x;
-            healthBar.sizeDelta = new Vector2(startBarSize * health / maxHealth, healthBar.sizeDelta.y);
+            startBarSize = healthBar.sizeDelta.y;
+            healthBar.sizeDelta = new Vector2 (healthBar.sizeDelta.x, startBarSize * health / maxHealth);
         }
     }
     private void Update()
@@ -35,11 +35,11 @@ public class Health : MonoBehaviour
     {
         health -= damage;
         if (isPlayer)
-            healthBar.sizeDelta = new Vector2(startBarSize * health / maxHealth, healthBar.sizeDelta.y);
+            healthBar.sizeDelta = new Vector2(healthBar.sizeDelta.x, startBarSize * health / maxHealth);
     }
     public void TakeBonus(int count)
     {
         health += count;
-        healthBar.sizeDelta = new Vector2(startBarSize * health / maxHealth, healthBar.sizeDelta.y);
+        healthBar.sizeDelta = new Vector2(healthBar.sizeDelta.x, startBarSize * health / maxHealth);
     }
 }
