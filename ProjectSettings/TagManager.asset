@@ -11,8 +11,9 @@ TagManager:
   - Rooms
   - Enemy
   - Bullet
-  - KnifeWearpon
   - HealthBonus
+  - KnifeWearpon
+  - WaterGun
   layers:
   - Default
   - TransparentFX
