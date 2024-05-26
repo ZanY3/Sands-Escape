@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  damage: 8
+  damage: 10
   wearponTag: WaterGun
 --- !u!96 &1168523223929283791
 TrailRenderer:

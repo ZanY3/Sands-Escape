@@ -21,6 +21,7 @@ public class Wearpon : MonoBehaviour
 
     private void Start()
     {
+        source = GetComponent<AudioSource>();
         mana = GameObject.FindGameObjectWithTag("Player").GetComponent<Mana>();
         startShootCD = shootCD;
     }
