@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 829987844333297952}
   - component: {fileID: 1058011691822555890}
   - component: {fileID: 8043742956103008560}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: knifeBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -280,6 +280,8 @@ MonoBehaviour:
   speed: 10
   damage: 20
   wearponTag: KnifeWearpon
+  enemyHitSound: {fileID: 8300000, guid: 5ddaabf4df15cfc46a4a5c1479f38b4c, type: 3}
+  hitSound: {fileID: 8300000, guid: 19f0509a3ee52ba49bbf99b9349c5546, type: 3}
 --- !u!95 &8043742956103008560
 Animator:
   serializedVersion: 5

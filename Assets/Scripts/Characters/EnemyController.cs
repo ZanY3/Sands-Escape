@@ -21,7 +21,8 @@ public class EnemyController : MonoBehaviour
     private Vector2 randomTargetPoint;
     private float startAttackCD;
     private Health health;
-    
+
+
 
     private void Start()
     {
@@ -55,7 +56,8 @@ public class EnemyController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            if(attackCD <= 0)
+            var player = collision.gameObject.GetComponent<PlayerMovement>();
+            if(attackCD <= 0 && !player.isDashing)
             {
                 collision.gameObject.GetComponent<Health>().TakeDamage(damage);
                 attackCD = startAttackCD;

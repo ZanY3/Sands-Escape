@@ -7,13 +7,17 @@ public class Bullet : MonoBehaviour
     public float speed;
     public int damage;
     public string wearponTag;
+    public AudioClip enemyHitSound;
+    public AudioClip hitSound;
 
+    private AudioSource sourceBullet;
     private Animator animator;
     private Transform wearponPos;
     private Rigidbody2D rb;
 
     private void Start()
     {
+        sourceBullet = GameObject.FindGameObjectWithTag("BulletSource").GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
 
         wearponPos = GameObject.FindGameObjectWithTag(wearponTag).GetComponent<Transform>();
@@ -26,8 +30,17 @@ public class Bullet : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
+            float randomPitch = Random.Range(0.6f, 1f);
+            sourceBullet.pitch = randomPitch;
+            sourceBullet.PlayOneShot(enemyHitSound);
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
 
+        }
+        else
+        {
+            float randomPitch = Random.Range(0.6f, 1f);
+            sourceBullet.pitch = randomPitch;
+            sourceBullet.PlayOneShot(hitSound);
         }
         Destroy(gameObject);
     }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2443147407344560057}
   - component: {fileID: -2769671544240283186}
   - component: {fileID: 3336326768826274054}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -209,3 +209,4 @@ MonoBehaviour:
   maxXRandomPoint: 5
   maxYRandomPoint: 1.7
   room: {fileID: 0}
+  NoReactLayerInDash: Dashing

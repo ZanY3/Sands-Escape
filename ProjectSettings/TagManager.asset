@@ -14,14 +14,15 @@ TagManager:
   - HealthBonus
   - KnifeWearpon
   - WaterGun
+  - BulletSource
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - NotReactWithDash
   - Water
   - UI
-  - 
+  - Dashing
   - 
   - 
   - 

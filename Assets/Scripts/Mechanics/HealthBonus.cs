@@ -15,7 +15,7 @@ public class HealthBonus : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && usable)
+        if (Input.GetKeyDown(KeyCode.E) && usable && playerHealth.health < playerHealth.maxHealth)
         {
             playerHealth.TakeBonus(healthCount);
             Destroy(gameObject);

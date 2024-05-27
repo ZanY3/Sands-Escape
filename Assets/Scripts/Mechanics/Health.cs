@@ -29,6 +29,10 @@ public class Health : MonoBehaviour
             {
                 SceneManager.LoadScene("Game");
             }
+            if(health >= maxHealth)
+            {
+                health = maxHealth;
+            }
         }
     }
     public void TakeDamage(int damage)

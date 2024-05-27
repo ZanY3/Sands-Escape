@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4195019780651464268}
   - component: {fileID: 8447670405112184756}
   - component: {fileID: 2395914080981750405}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WaterGun
   m_TagString: WaterGun
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.12
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -234,7 +234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5267071932921468812}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -266,7 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6097352311190979127}
   - component: {fileID: 1615514574296664885}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
