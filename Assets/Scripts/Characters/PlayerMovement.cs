@@ -17,7 +17,10 @@ public class PlayerMovement : MonoBehaviour
     private bool canDash = true;
     private float startDashCD;
     private TrailRenderer tRenderer;
+    [Space]
+    public AudioClip dashSound;
 
+    private AudioSource source;
     private Animator animator;
     private bool isFacingRight = true;
     private bool isRunning = false;
@@ -28,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        source = GetComponent<AudioSource>();
         startDashCD = dashCD;
         tRenderer = GetComponent<TrailRenderer>();
         animator = GetComponent<Animator>();
@@ -38,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
         dashCD -= Time.deltaTime;
         if (Input.GetKeyDown(KeyCode.LeftShift) && dashCD <= 0)
         {
+            source.PlayOneShot(dashSound);
             Dash();
             dashCD = startDashCD;
         }
@@ -49,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
         moveVertical = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
         movement.Normalize();
-        if(moveHorizontal > 0.1f || moveVertical > 0.1f)
+        if (moveHorizontal > 0.1f || moveVertical > 0.1f)
         {
             isRunning = true;
         }

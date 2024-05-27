@@ -281,7 +281,7 @@ MonoBehaviour:
   damage: 20
   wearponTag: KnifeWearpon
   enemyHitSound: {fileID: 8300000, guid: 5ddaabf4df15cfc46a4a5c1479f38b4c, type: 3}
-  hitSound: {fileID: 8300000, guid: 19f0509a3ee52ba49bbf99b9349c5546, type: 3}
+  hitSound: {fileID: 8300000, guid: 3ff50de7af5931d43bed4f4ec328e7b5, type: 3}
 --- !u!95 &8043742956103008560
 Animator:
   serializedVersion: 5

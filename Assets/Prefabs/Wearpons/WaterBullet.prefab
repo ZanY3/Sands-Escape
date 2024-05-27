@@ -166,7 +166,7 @@ MonoBehaviour:
   damage: 10
   wearponTag: WaterGun
   enemyHitSound: {fileID: 8300000, guid: 4504aa957c543054f87df3415a60c53b, type: 3}
-  hitSound: {fileID: 8300000, guid: 19f0509a3ee52ba49bbf99b9349c5546, type: 3}
+  hitSound: {fileID: 8300000, guid: 3ff50de7af5931d43bed4f4ec328e7b5, type: 3}
 --- !u!96 &1168523223929283791
 TrailRenderer:
   serializedVersion: 3
