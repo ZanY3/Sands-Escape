@@ -15,6 +15,7 @@ TagManager:
   - KnifeWearpon
   - WaterGun
   - BulletSource
+  - SourceForBonuses
   layers:
   - Default
   - TransparentFX

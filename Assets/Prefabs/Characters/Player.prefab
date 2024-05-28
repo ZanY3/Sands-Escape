@@ -461,7 +461,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3423804747556113560}
   - component: {fileID: 6122535292185370205}
-  - component: {fileID: 7984970231100233040}
   m_Layer: 0
   m_Name: MiniMap(Cam)
   m_TagString: Untagged
@@ -535,14 +534,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &7984970231100233040
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7990677887077635342}
-  m_Enabled: 1
 --- !u!1 &8073236766085521985
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +550,7 @@ GameObject:
   - component: {fileID: 294403564303594717}
   - component: {fileID: 2444335354226165976}
   - component: {fileID: 7736298342373171739}
+  - component: {fileID: 7034257293851467385}
   - component: {fileID: 3206332611159837737}
   - component: {fileID: 2112881047153132502}
   m_Layer: 0
@@ -671,6 +663,7 @@ MonoBehaviour:
   dashCD: 1.3
   isDashing: 0
   NoReactLayerInDash: Dashing
+  dashSound: {fileID: 8300000, guid: c9cf8f43e007eeb49bf58152fc8b74b2, type: 3}
 --- !u!114 &5865642307385149755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,6 +680,7 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 0}
   isPlayer: 1
+  playerDamageSound: {fileID: 8300000, guid: 6a337e400df63dc4586ef8e096bbe268, type: 3}
 --- !u!114 &294403564303594717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,6 +746,102 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
+--- !u!82 &7034257293851467385
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8073236766085521985}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!96 &3206332611159837737
 TrailRenderer:
   serializedVersion: 3

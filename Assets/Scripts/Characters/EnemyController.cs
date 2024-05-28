@@ -17,12 +17,11 @@ public class EnemyController : MonoBehaviour
     public float maxYRandomPoint;
     [Space]
     public WallController room;
+
     private Transform target;
     private Vector2 randomTargetPoint;
     private float startAttackCD;
     private Health health;
-
-
 
     private void Start()
     {
@@ -59,6 +58,7 @@ public class EnemyController : MonoBehaviour
             var player = collision.gameObject.GetComponent<PlayerMovement>();
             if(attackCD <= 0 && !player.isDashing)
             {
+                
                 collision.gameObject.GetComponent<Health>().TakeDamage(damage);
                 attackCD = startAttackCD;
             }
@@ -69,6 +69,7 @@ public class EnemyController : MonoBehaviour
             SetNewRandomTargetPoint();
         }
     }
+
     private void SetNewRandomTargetPoint()
     {
         randomTargetPoint = GetRandomPoint();

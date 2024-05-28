@@ -11,12 +11,20 @@ public class Health : MonoBehaviour
     public int maxHealth;
     public RectTransform healthBar;
     public bool isPlayer = false;
+    public AudioClip playerDamageSound;
+
+    private CameraShake cameraShake;
+
+    private AudioSource source;
+
 
     private float startBarSize;
     private void Start()
     {
         if (isPlayer)
         {
+            cameraShake = FindAnyObjectByType<CameraShake>();
+            source = GetComponent<AudioSource>();
             startBarSize = healthBar.sizeDelta.y;
             healthBar.sizeDelta = new Vector2 (healthBar.sizeDelta.x, startBarSize * health / maxHealth);
         }
@@ -39,7 +47,11 @@ public class Health : MonoBehaviour
     {
         health -= damage;
         if (isPlayer)
+        {
+            cameraShake.ShakeCamera();
             healthBar.sizeDelta = new Vector2(healthBar.sizeDelta.x, startBarSize * health / maxHealth);
+            source.PlayOneShot(playerDamageSound);
+        }
     }
     public void TakeBonus(int count)
     {

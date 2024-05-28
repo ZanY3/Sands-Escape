@@ -188,6 +188,7 @@ MonoBehaviour:
   maxHealth: 60
   healthBar: {fileID: 0}
   isPlayer: 0
+  playerDamageSound: {fileID: 0}
 --- !u!114 &3336326768826274054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,11 +203,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   maxRangeToFollow: 8
-  attackCD: 1.5
+  attackCD: 0.7
   damage: 20
   minXRandomPoint: -5
   minYRandomPoint: -2.7
   maxXRandomPoint: 5
   maxYRandomPoint: 1.7
   room: {fileID: 0}
-  NoReactLayerInDash: Dashing

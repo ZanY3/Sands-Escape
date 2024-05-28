@@ -6,10 +6,16 @@ public class HealthBonus : MonoBehaviour
 {
     public int healthCount;
     public GameObject clueText;
+    [Space]
+    public GameObject takeParticles;
+    public AudioClip healthSound;
+
+    private AudioSource source;
     private bool usable;
     private Health playerHealth;
     private void Start()
     {
+        source = GameObject.FindGameObjectWithTag("SourceForBonuses").GetComponent<AudioSource>();
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
     }
 
@@ -17,6 +23,8 @@ public class HealthBonus : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && usable && playerHealth.health < playerHealth.maxHealth)
         {
+            source.PlayOneShot(healthSound);
+            Instantiate(takeParticles, transform.position, Quaternion.identity);
             playerHealth.TakeBonus(healthCount);
             Destroy(gameObject);
         }
