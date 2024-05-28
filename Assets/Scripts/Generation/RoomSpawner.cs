@@ -4,7 +4,7 @@ public class RoomSpawner : MonoBehaviour
 {
     public Direction direction; // направление данной комнаты
     public enum Direction
-    { 
+    {
         Top,
         Bottom,
         Left,
@@ -12,6 +12,8 @@ public class RoomSpawner : MonoBehaviour
         None
     } //вариации нарпавлений комнат
     public bool spawned = false;
+    public bool canBeDestroyed = false;
+
     private RoomVariants variants;
     private int rand;
     private float waitTime = 3f;
@@ -23,9 +25,9 @@ public class RoomSpawner : MonoBehaviour
     }
     void Spawn()
     {
-        if(!spawned)
+        if (!spawned)
         {
-            switch(direction)
+            switch (direction)
             {
                 case Direction.Top:
                     rand = Random.Range(0, variants.topRooms.Length);
@@ -49,9 +51,22 @@ public class RoomSpawner : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.CompareTag("RoomPoint") && collision.GetComponent<RoomSpawner>().spawned) //что бы предатвратить спавн комнаты на комнате
+        if (collision.CompareTag("RoomPoint") && collision.GetComponent<RoomSpawner>().spawned) //что бы предатвратить спавн комнаты на комнате
         {
             Destroy(gameObject);
+        }
+        if (collision.CompareTag("RoomPoint") && collision.GetComponent<RoomSpawner>().spawned == false && spawned == false)
+        {
+            if (canBeDestroyed)
+            {
+                Debug.Log("RoomPoint collision detected and conditions met. Destroying the object.");
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                var roomSpawner = collision.gameObject.GetComponent<RoomSpawner>();
+                roomSpawner.canBeDestroyed = true;
+            }
         }
     }
 }
