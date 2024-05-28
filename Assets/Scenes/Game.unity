@@ -1020,8 +1020,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wearpons:
   - {fileID: 3284852687858210460, guid: 64f1fd1ad65aa834fafdd78af67df9f8, type: 3}
-  canDrop: 01
+  - {fileID: 415783990372751726, guid: 4433e17c3515ea34c841a71c7cc991ad, type: 3}
+  canDrop: 0101
   chances:
+  - 0.8
   - 0.8
 --- !u!4 &1036962679
 Transform:
@@ -1890,7 +1892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 222108403237788458, guid: 521d30e06b6569d44a501917e4897067, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.106
+      value: 1.144
       objectReference: {fileID: 0}
     - target: {fileID: 222108403237788458, guid: 521d30e06b6569d44a501917e4897067, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1928,8 +1930,36 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1895597375878976070, guid: 521d30e06b6569d44a501917e4897067, type: 3}
+      propertyPath: m_Size.x
+      value: 0.53333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895597375878976070, guid: 521d30e06b6569d44a501917e4897067, type: 3}
+      propertyPath: m_Size.y
+      value: 0.53333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 1895597375878976070, guid: 521d30e06b6569d44a501917e4897067, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0e12f9dc48044ec47bdb5732a067bc00, type: 3}
+    - target: {fileID: 1895597375878976070, guid: 521d30e06b6569d44a501917e4897067, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4126771075145860580, guid: 521d30e06b6569d44a501917e4897067, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341293082321465663, guid: 521d30e06b6569d44a501917e4897067, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341293082321465663, guid: 521d30e06b6569d44a501917e4897067, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4341293082321465663, guid: 521d30e06b6569d44a501917e4897067, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5127493202229009206, guid: 521d30e06b6569d44a501917e4897067, type: 3}

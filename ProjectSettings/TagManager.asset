@@ -16,6 +16,7 @@ TagManager:
   - WaterGun
   - BulletSource
   - SourceForBonuses
+  - BowGun
   layers:
   - Default
   - TransparentFX
