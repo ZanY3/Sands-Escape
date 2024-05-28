@@ -1326,6 +1326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 1528705824758212815, guid: 1be1741f18530214aa51d53cb9dc6bd0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2055194323650494629, guid: 1be1741f18530214aa51d53cb9dc6bd0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14

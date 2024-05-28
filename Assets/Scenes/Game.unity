@@ -1742,6 +1742,10 @@ PrefabInstance:
       propertyPath: walkSounds
       value: 
       objectReference: {fileID: 8300000, guid: 5cf7e202afcdba9419aa56349fd4cdf1, type: 3}
+    - target: {fileID: 7984970231100233040, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8073236766085521985, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1786,7 +1790,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7984970231100233040, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
