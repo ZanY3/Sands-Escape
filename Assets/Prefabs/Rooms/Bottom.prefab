@@ -2184,7 +2184,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6264237036097242544, guid: 144e478da45658342ad79cf0e12de4cb, type: 3}
       propertyPath: m_Name
-      value: Barrel
+      value: BlockInRoom
       objectReference: {fileID: 0}
     - target: {fileID: 7223279606992852740, guid: 144e478da45658342ad79cf0e12de4cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2192,7 +2192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7223279606992852740, guid: 144e478da45658342ad79cf0e12de4cb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.82321095
+      value: 0.57321095
       objectReference: {fileID: 0}
     - target: {fileID: 7223279606992852740, guid: 144e478da45658342ad79cf0e12de4cb, type: 3}
       propertyPath: m_LocalPosition.z

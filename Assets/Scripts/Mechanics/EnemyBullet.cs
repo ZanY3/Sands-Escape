@@ -19,6 +19,7 @@ public class EnemyBullet : MonoBehaviour
         sourceBullet = GameObject.FindGameObjectWithTag("BulletSource").GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         rb.AddForce(touretPos.up * speed, ForceMode2D.Impulse);
+        Destroy(gameObject, 2);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

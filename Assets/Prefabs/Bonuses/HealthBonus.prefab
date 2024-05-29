@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c6861ecc1a8fb45836dbc1908cf0db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthCount: 20
+  healthCount: 40
   clueText: {fileID: 1674849457740438199}
   takeParticles: {fileID: 8042587620306175936, guid: 79a7796f02c3ca0469789d4385656dc3, type: 3}
   healthSound: {fileID: 8300000, guid: 8c4d621832cb6fb45b5b727126b2ef79, type: 3}

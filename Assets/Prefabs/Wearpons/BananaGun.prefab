@@ -179,8 +179,8 @@ MonoBehaviour:
   offset: -90
   usable: 1
   isUseMana: 1
-  manaForOneShot: 4
-  shootSound: {fileID: 8300000, guid: 78bb385cfc0d1ce4e805d19a177cf12e, type: 3}
+  manaForOneShot: 6
+  shootSound: {fileID: 8300000, guid: 5917c92394bb5af499b369e5accd6c21, type: 3}
 --- !u!82 &5174026179393932900
 AudioSource:
   m_ObjectHideFlags: 0

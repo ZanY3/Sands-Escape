@@ -13,6 +13,8 @@ public class ChestController : MonoBehaviour
     private Collider2D colider;
     private Animator animator;
 
+    private bool canDrop = true;
+
     private void Start()
     {
         loot = FindAnyObjectByType<ChestLoot>();
@@ -22,13 +24,13 @@ public class ChestController : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && usable)
+        if(Input.GetKeyDown(KeyCode.E) && usable && canDrop)
         {
             source.PlayOneShot(openSound);
             Instantiate(openParticles, transform.position, Quaternion.identity);
             chestWearpon = loot.GetRandomWearpon();
             Instantiate(chestWearpon, transform.position, Quaternion.identity);
-            
+            canDrop = false;
             colider.isTrigger = true;
             animator.SetTrigger("Destroy");
             Destroy(gameObject, 1f);
