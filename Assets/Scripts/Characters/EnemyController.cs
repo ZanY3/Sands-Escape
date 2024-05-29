@@ -67,6 +67,7 @@ public class EnemyController : MonoBehaviour
         if (collision.gameObject.CompareTag("Block") || collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Enemy"))
         {
             SetNewRandomTargetPoint();
+            MoveToRandomPoint();
         }
     }
 

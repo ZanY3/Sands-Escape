@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isFacingRight = true;
     private bool isRunning = false;
     private Rigidbody2D rb;
-    private int defaultLayer = 0;
+    private int defaultLayer = 8;
 
     private float moveHorizontal, moveVertical;
 

@@ -235,7 +235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 101.14288, y: 304.4285}
+  m_AnchoredPosition: {x: 101.14258, y: 304.4285}
   m_SizeDelta: {x: 40, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &55442405
@@ -1019,12 +1019,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wearpons:
-  - {fileID: 3284852687858210460, guid: 64f1fd1ad65aa834fafdd78af67df9f8, type: 3}
   - {fileID: 415783990372751726, guid: 4433e17c3515ea34c841a71c7cc991ad, type: 3}
-  canDrop: 0101
+  - {fileID: 3284852687858210460, guid: 64f1fd1ad65aa834fafdd78af67df9f8, type: 3}
+  - {fileID: 4484952600261584565, guid: c8d7b0906567a594b8d861953c775363, type: 3}
+  canDrop: 010101
   chances:
-  - 0.8
-  - 0.8
+  - 0.9
+  - 0.7
+  - 0.4
 --- !u!4 &1036962679
 Transform:
   m_ObjectHideFlags: 0
@@ -1801,10 +1803,34 @@ PrefabInstance:
       propertyPath: manaBar
       value: 
       objectReference: {fileID: 276130651}
+    - target: {fileID: 1355738225727478239, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190808407947049567, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2301635607330637005, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494043491227592077, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142813921756724366, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5865642307385149755, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2111603483}
+    - target: {fileID: 5906619201601201678, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7185477261962868170, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
       propertyPath: dashCD
       value: 1
@@ -1813,9 +1839,21 @@ PrefabInstance:
       propertyPath: dashTime
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7990677887077635342, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8073236766085521985, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073236766085521985, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8481987605443120404, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8693580165867448143, guid: 649c090c87c951d43a28109e7a56d65f, type: 3}
       propertyPath: m_LocalPosition.x

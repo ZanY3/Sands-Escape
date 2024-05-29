@@ -17,6 +17,9 @@ TagManager:
   - BulletSource
   - SourceForBonuses
   - BowGun
+  - BananaWearpon
+  - EnemyBullet
+  - Touret
   layers:
   - Default
   - TransparentFX
@@ -25,8 +28,8 @@ TagManager:
   - Water
   - UI
   - Dashing
-  - 
-  - 
+  - EnemyBullet
+  - Player
   - 
   - 
   - 
