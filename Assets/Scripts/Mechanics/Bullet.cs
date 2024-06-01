@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public float speed;
     public int damage;
     public string wearponTag;
+    public GameObject enemyDamageParticles;
     public AudioClip enemyHitSound;
     public AudioClip hitSound;
 
@@ -30,6 +31,7 @@ public class Bullet : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
+            Instantiate(enemyDamageParticles, transform.position, Quaternion.identity);
             float randomPitch = Random.Range(0.6f, 1f);
             sourceBullet.pitch = randomPitch;
             sourceBullet.PlayOneShot(enemyHitSound);

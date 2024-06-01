@@ -280,6 +280,7 @@ MonoBehaviour:
   speed: 10
   damage: 20
   wearponTag: KnifeWearpon
+  enemyDamageParticles: {fileID: 717662986777491973, guid: 33618f5be13a09a469b20fcd3b5b58a5, type: 3}
   enemyHitSound: {fileID: 8300000, guid: 5ddaabf4df15cfc46a4a5c1479f38b4c, type: 3}
   hitSound: {fileID: 8300000, guid: 3ff50de7af5931d43bed4f4ec328e7b5, type: 3}
 --- !u!95 &8043742956103008560

@@ -13,6 +13,8 @@ public class Wearpon : MonoBehaviour
     public bool isUseMana = false;
     public float manaForOneShot;
     [Space]
+    public GameObject shootParticles;
+    public Color shootParticlesColor;
     public AudioClip shootSound;
 
     private Mana mana;
@@ -46,7 +48,17 @@ public class Wearpon : MonoBehaviour
                     source.PlayOneShot(shootSound);
                 }
                 Instantiate(bullet, shootPoint.position, Quaternion.identity);
-                shootCD = startShootCD;
+
+                GameObject particles = Instantiate(shootParticles, transform.position, Quaternion.identity);
+                ParticleSystem particleSystem = particles.GetComponent<ParticleSystem>();
+                if (particleSystem != null)
+                {
+                    var mainModule = particleSystem.main;
+                    mainModule.startColor = shootParticlesColor;
+                    Color colorWithMaxAlpha = new Color(shootParticlesColor.r, shootParticlesColor.g, shootParticlesColor.b, 1f);
+                    mainModule.startColor = new ParticleSystem.MinMaxGradient(colorWithMaxAlpha);
+                    shootCD = startShootCD;
+                }
             }
         }
     }

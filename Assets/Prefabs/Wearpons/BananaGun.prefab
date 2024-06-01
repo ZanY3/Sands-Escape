@@ -180,6 +180,8 @@ MonoBehaviour:
   usable: 1
   isUseMana: 1
   manaForOneShot: 6
+  shootParticles: {fileID: 3721895294331392483, guid: 11fbd412baf9159499f01b37aa367555, type: 3}
+  shootParticlesColor: {r: 0.89017344, g: 1, b: 0, a: 0}
   shootSound: {fileID: 8300000, guid: 5917c92394bb5af499b369e5accd6c21, type: 3}
 --- !u!82 &5174026179393932900
 AudioSource:

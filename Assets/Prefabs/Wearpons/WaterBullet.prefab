@@ -165,6 +165,7 @@ MonoBehaviour:
   speed: 10
   damage: 12
   wearponTag: WaterGun
+  enemyDamageParticles: {fileID: 717662986777491973, guid: 33618f5be13a09a469b20fcd3b5b58a5, type: 3}
   enemyHitSound: {fileID: 8300000, guid: 4504aa957c543054f87df3415a60c53b, type: 3}
   hitSound: {fileID: 8300000, guid: 3ff50de7af5931d43bed4f4ec328e7b5, type: 3}
 --- !u!96 &1168523223929283791

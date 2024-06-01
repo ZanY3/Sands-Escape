@@ -21,7 +21,7 @@ public class HealthBonus : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && usable && playerHealth.health < playerHealth.maxHealth)
+        if (Input.GetKeyDown(KeyCode.E) && usable && playerHealth.health <= playerHealth.maxHealth - healthCount)
         {
             source.PlayOneShot(healthSound);
             Instantiate(takeParticles, transform.position, Quaternion.identity);

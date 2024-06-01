@@ -12,15 +12,18 @@ public class Health : MonoBehaviour
     public RectTransform healthBar;
     public bool isPlayer = false;
     public AudioClip playerDamageSound;
+    [Space]
+    public int enemyDieCoinsDrop = 1;
 
     private CameraShake cameraShake;
-
+    private CoinsController coinController;
     private AudioSource source;
 
-
     private float startBarSize;
+
     private void Start()
     {
+        coinController = FindAnyObjectByType<CoinsController>();
         if (isPlayer)
         {
             cameraShake = FindAnyObjectByType<CameraShake>();
@@ -40,6 +43,13 @@ public class Health : MonoBehaviour
             if(health >= maxHealth)
             {
                 health = maxHealth;
+            }
+        }
+        else
+        {
+            if(health <= 0)
+            {
+                coinController.TakeCoins(enemyDieCoinsDrop);
             }
         }
     }

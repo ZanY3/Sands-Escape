@@ -19,7 +19,13 @@ public class PlayerMovement : MonoBehaviour
     private TrailRenderer tRenderer;
     [Space]
     public AudioClip dashSound;
+    [Space]
+    public int coinCountOnTake;
+    public GameObject coinsTakeParticle;
+    public AudioSource coinSource;
+    public AudioClip coinTakeSound;
 
+    private CoinsController coinController;
     private AudioSource source;
     private Animator animator;
     private bool isFacingRight = true;
@@ -31,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        coinController = FindObjectOfType<CoinsController>();
         source = GetComponent<AudioSource>();
         startDashCD = dashCD;
         tRenderer = GetComponent<TrailRenderer>();
@@ -72,6 +79,16 @@ public class PlayerMovement : MonoBehaviour
         isRunning = movement != Vector2.zero;
         //animator.SetBool("isRunning", isRunning);
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Coin"))
+        {
+            coinController.TakeCoins(coinCountOnTake);
+            Instantiate(coinsTakeParticle, collision.transform.position, Quaternion.identity);
+            coinSource.PlayOneShot(coinTakeSound);
+            Destroy(collision.gameObject);
+        }
     }
     private async void Dash()
     {
