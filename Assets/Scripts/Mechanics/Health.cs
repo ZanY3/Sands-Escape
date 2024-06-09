@@ -68,4 +68,9 @@ public class Health : MonoBehaviour
         health += count;
         healthBar.sizeDelta = new Vector2(healthBar.sizeDelta.x, startBarSize * health / maxHealth);
     }
+    public void UpMaxHealthLevel()
+    {
+        maxHealth += 25;
+        healthBar.sizeDelta = new Vector2(healthBar.sizeDelta.x, startBarSize * health / maxHealth);
+    }
 }

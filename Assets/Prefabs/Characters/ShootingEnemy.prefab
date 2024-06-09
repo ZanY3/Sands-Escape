@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2757e0a3b516c439180a32dc478b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootCD: 0.9
+  shootCD: 1.3
   shootPoint: {fileID: 466451226762104261}
   touret: {fileID: 387849463900738637}
   bulletPrefab: {fileID: 4575403597569222606, guid: cd36c1f5a96cf274b867b758c7f09843, type: 3}
@@ -243,7 +243,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   isPlayer: 0
   playerDamageSound: {fileID: 8300000, guid: 6a337e400df63dc4586ef8e096bbe268, type: 3}
-  enemyDieCoinsDrop: 2
+  enemyDieCoinsDrop: 4
 --- !u!114 &1707514253155562764
 MonoBehaviour:
   m_ObjectHideFlags: 0

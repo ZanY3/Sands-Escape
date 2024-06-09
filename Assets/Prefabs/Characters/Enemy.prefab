@@ -189,6 +189,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   isPlayer: 0
   playerDamageSound: {fileID: 0}
+  enemyDieCoinsDrop: 2
 --- !u!114 &3336326768826274054
 MonoBehaviour:
   m_ObjectHideFlags: 0

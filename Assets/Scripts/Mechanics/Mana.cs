@@ -28,4 +28,9 @@ public class Mana : MonoBehaviour
     {
         mana -= count;
     }
+    public void UpMaxManaLevel()
+    {
+        maxMana += 25;
+        manaBar.sizeDelta = new Vector2(manaBar.sizeDelta.x, startBarSize * mana / maxMana);
+    }
 }
