@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4113702747327188169}
   - component: {fileID: 3058231212831184763}
   - component: {fileID: 4268879150733667338}
-  - component: {fileID: 3701723251985499414}
   m_Layer: 0
   m_Name: BossBlock
   m_TagString: Block
@@ -159,16 +158,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3701723251985499414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4390878891423389790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f22b7dfc7a0dc894d8859f9b4a88fee5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wallPrefab: {fileID: 5440492909324007660, guid: 2c70429813f45ff48b7744da69112e7e, type: 3}
