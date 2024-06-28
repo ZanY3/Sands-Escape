@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(gameObject);
         coinController = FindObjectOfType<CoinsController>();
         source = GetComponent<AudioSource>();
         startDashCD = dashCD;

@@ -17,6 +17,8 @@ public class RoomSpawner : MonoBehaviour
     private RoomVariants variants;
     private int rand;
     private float waitTime = 3f;
+    private bool canDeleteShop = true;
+    private bool canDeleteBoss = true;
     private void Start()
     {
         variants = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomVariants>();
@@ -30,19 +32,29 @@ public class RoomSpawner : MonoBehaviour
             switch (direction)
             {
                 case Direction.Top:
-                    rand = Random.Range(0, variants.topRooms.Length);
+                    rand = Random.Range(0, variants.topRooms.Count);
                     Instantiate(variants.topRooms[rand], transform.position, Quaternion.identity);
+                    if(rand == 1 && canDeleteShop)
+                    {
+                        variants.topRooms.RemoveAt(1);
+                        canDeleteShop = false;
+                    }
+                    if (rand == 4 && canDeleteBoss)
+                    {
+                        variants.topRooms.RemoveAt(4);
+                        canDeleteBoss = false;
+                    }
                     break;
                 case Direction.Bottom:
-                    rand = Random.Range(0, variants.bottomRooms.Length);
+                    rand = Random.Range(0, variants.bottomRooms.Count);
                     Instantiate(variants.bottomRooms[rand], transform.position, Quaternion.identity);
                     break;
                 case Direction.Left:
-                    rand = Random.Range(0, variants.leftRooms.Length);
+                    rand = Random.Range(0, variants.leftRooms.Count);
                     Instantiate(variants.leftRooms[rand], transform.position, Quaternion.identity);
                     break;
                 case Direction.Right:
-                    rand = Random.Range(0, variants.rightRooms.Length);
+                    rand = Random.Range(0, variants.rightRooms.Count);
                     Instantiate(variants.rightRooms[rand], transform.position, Quaternion.identity);
                     break;
             }

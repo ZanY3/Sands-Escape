@@ -11,7 +11,6 @@ public class RoomMover : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("ss");
         if(collision.gameObject.CompareTag("Player"))
         {
             collision.transform.position += playerChangePos;
